@@ -4,18 +4,17 @@
 # or whitespace (' ').
 
 class EmailAddressParser
-  @@parse = []
   
   def initialize(emails_csv)
     emails_array = emails_csv.gsub(",", " ").split(" ")
     
     emails_array.each do |email|
-      @@parse << email if !(@@parse.include?(email))
+    @parse << email if !(@parse.include?(email))
     end
   end
    
   def parse
-    return @@parse
+    return @parse
   end
   
 end
