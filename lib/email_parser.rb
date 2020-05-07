@@ -7,6 +7,7 @@ class EmailAddressParser
   
   def initialize(emails_csv)
     emails_array = emails_csv.gsub(",", " ").split(" ")
+    @parse = []
     
     emails_array.each do |email|
     @parse << email if !(@parse.include?(email))
